@@ -3,7 +3,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 
 ### Contents
 #### Loader
-- loader ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode (`<protocol>_x64.xprocess.bin`)
+- loader ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode `<protocol>_x64.xprocess.bin`
 #### Profile
 - crtl.profile ⇒ malleable C2 profile used on CRTL exam, based on [webbug.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/webbug.profile)
 - mwccdc.profile ⇒ malleable C2 profile used for MWCCDC regionals in 2024, based on [microsoftupdate_getonly.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/microsoftupdate_getonly.profile)
