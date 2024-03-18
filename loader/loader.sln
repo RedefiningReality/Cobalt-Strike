@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "loader", "loader.vcxproj", "{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		EXE - Download|x64 = EXE - Download|x64
+		EXE - Download|x86 = EXE - Download|x86
+		EXE - Read|x64 = EXE - Read|x64
+		EXE - Read|x86 = EXE - Read|x86
+		EXE - Stageless|x64 = EXE - Stageless|x64
+		EXE - Stageless|x86 = EXE - Stageless|x86
+		Service - Download|x64 = Service - Download|x64
+		Service - Download|x86 = Service - Download|x86
+		Service - Read|x64 = Service - Read|x64
+		Service - Read|x86 = Service - Read|x86
+		Service - Stageless|x64 = Service - Stageless|x64
+		Service - Stageless|x86 = Service - Stageless|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Download|x64.ActiveCfg = EXE - Download|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Download|x64.Build.0 = EXE - Download|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Download|x86.ActiveCfg = EXE - Download|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Download|x86.Build.0 = EXE - Download|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Read|x64.ActiveCfg = EXE - Read|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Read|x64.Build.0 = EXE - Read|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Read|x86.ActiveCfg = EXE - Read|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Read|x86.Build.0 = EXE - Read|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Stageless|x64.ActiveCfg = EXE - Stageless|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Stageless|x64.Build.0 = EXE - Stageless|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Stageless|x86.ActiveCfg = EXE - Stageless|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.EXE - Stageless|x86.Build.0 = EXE - Stageless|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Download|x64.ActiveCfg = Service - Download|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Download|x64.Build.0 = Service - Download|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Download|x86.ActiveCfg = Service - Download|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Download|x86.Build.0 = Service - Download|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Read|x64.ActiveCfg = Service - Read|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Read|x64.Build.0 = Service - Read|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Read|x86.ActiveCfg = Service - Read|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Read|x86.Build.0 = Service - Read|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Stageless|x64.ActiveCfg = Service - Stageless|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Stageless|x64.Build.0 = Service - Stageless|x64
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Stageless|x86.ActiveCfg = Service - Stageless|Win32
+		{E8558FE3-4239-4569-8FFA-F0B6B86C80E5}.Service - Stageless|x86.Build.0 = Service - Stageless|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF385919-FF6F-4C14-B21D-1D0F73829E80}
+	EndGlobalSection
+EndGlobal
