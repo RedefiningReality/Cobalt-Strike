@@ -3,7 +3,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 
 ### Contents
 #### Loader
-- loader ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode (<protocol>_x64.xprocess.bin)
+- loader ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode (`<protocol>_x64.xprocess.bin`)
 #### Profile
 - crtl.profile ⇒ malleable C2 profile used on CRTL exam, based on [webbug.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/webbug.profile)
 - mwccdc.profile ⇒ malleable C2 profile used for MWCCDC regionals in 2024, based on [microsoftupdate_getonly.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/microsoftupdate_getonly.profile)
@@ -15,7 +15,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 - inline-x.cna ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier
 - command-all.cna ⇒ execute `run` or `shell` command on *all* active Cobalt Strike beacons, without having to interact with each one individually
 
-**Note:** When building powerpick.cs, you'll have to include a reference to **System.Management.Automation.dll**, which is located in `C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>`
+**Note:** When building powerpick.cs, you'll have to include a reference to **System.Management.Automation.dll**, which is located in **C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>**
 
 ### Loader Usage
 #### Two executable types:
