@@ -13,6 +13,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 #### Post-Ex
 - powerpick.cs ⇒ C# code for running unmanaged PowerShell, providing the PowerShell command as an argument(s) - compatible with inline-x.cna
 - inline-x.cna ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier
+- command-all.cna ⇒ execute `run` or `shell` command on *all* active Cobalt Strike beacons, without having to interact with each one individually
 
 **Note:** When building powerpick.cs, you'll have to include a reference to System.Management.Automation.dll, which is located in C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>
 
@@ -40,6 +41,12 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 5. Execute unmanaged powershell inline with `x powerpick <powershell>`
 
 **Note:** I commented out the portions of the script that parse double quotes (") in arguments differently because I found this to get in the way, especially when running PowerShell commands. If you don't like this, you are welcome to uncomment the code portions starting on line 87.
+
+### Command All Usage
+1. Load script into Cobalt Strike
+2. Open Script Console
+3. Execute `run` on all active beacons with `run_all <exe> <args>`
+4. Execute `shell` on all active beacons with `shell_all <command>`
 
 ### Credit
 My experience with AV/EDR evasion techniques and Cobalt Strike comes from the following:
