@@ -2,17 +2,18 @@
 Various resources to enhance Cobalt Strike's functionality and its ability to evade antivirus/EDR detection. Includes the custom tooling I used when pursuing the Certified Red Team Lead (CRTL) certification.
 
 ### Contents
-Loader
-- loader ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode (<protocol>_x64.xprocess.bin)  
-Profile
+##### Loader
+- loader ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode (<protocol>_x64.xprocess.bin)
+##### Profile
 - crtl.profile ⇒ malleable C2 profile used on CRTL exam, based on [webbug.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/webbug.profile)
-- mwccdc.profile ⇒ malleable C2 profile used for MWCCDC regionals in 2024, based on [microsoftupdate_getonly.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/microsoftupdate_getonly.profile)  
-Kits
+- mwccdc.profile ⇒ malleable C2 profile used for MWCCDC regionals in 2024, based on [microsoftupdate_getonly.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/microsoftupdate_getonly.profile)
+##### Kits
 - sleepmask ⇒ Cobalt Strike sleep mask kit modifications to spoof msedge.exe legitimate thread callstack
-- process_inject ⇒ Cobalt Strike process injection kit modifications that implement process hollowing technique - not necessary since this option is available in the malleable C2 profile, but it's a good example of how to use kernel32.dll and ntdll.dll Windows API function calls to create your own injection. I found concrete examples of this to be severely lacking on the internet.  
-Post-Ex
+- process_inject ⇒ Cobalt Strike process injection kit modifications that implement process hollowing technique - not necessary since this option is available in the malleable C2 profile, but it's a good example of how to use kernel32.dll and ntdll.dll Windows API function calls to create your own injection. I found concrete examples of this to be severely lacking on the internet.
+##### Post-Ex
 - powerpick.cs ⇒ C# code for running unmanaged PowerShell, providing the PowerShell command as an argument(s) - compatible with inline-x.cna
-- inline-x.cna ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier  
+- inline-x.cna ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier
+
 **Note:** When building powerpick.cs, you'll have to include a reference to System.Management.Automation.dll, which is located in C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>
 
 ### Loader Usage
