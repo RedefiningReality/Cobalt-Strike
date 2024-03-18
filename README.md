@@ -33,7 +33,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 5. Build Solution
 
 ### Inline X Usage
-1. Edit `$powerpickPath` to specify the path of your unmanaged PowerShell exe (built from powerpick.cs)
+1. Change `$powerpickPath` to specify the path of your unmanaged PowerShell exe (built from powerpick.cs)
 2. Change `$etw` and `$amsi` as you see fit - I wanted it to always bypass AMSI and ETW, which is why I set these values to 1
 3. Load script into Cobalt Strike
 4. Execute .NET assembly inline with `x execute-assembly <exe> <args>`
