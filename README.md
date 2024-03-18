@@ -15,7 +15,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 - inline-x.cna ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier
 - command-all.cna ⇒ execute `run` or `shell` command on *all* active Cobalt Strike beacons, without having to interact with each one individually
 
-**Note:** When building powerpick.cs, you'll have to include a reference to **System.Management.Automation.dll**, which is located in **C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>**
+**Note:** When building powerpick.cs, you'll have to include a reference to **System.Management.Automation.dll**, which is located in **C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\\<version>**
 
 ### Loader Usage
 #### Two executable types:
