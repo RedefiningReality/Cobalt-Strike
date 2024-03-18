@@ -38,6 +38,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 3. Load script into Cobalt Strike
 4. Execute .NET assembly inline with `x execute-assembly <exe> <args>`
 5. Execute unmanaged powershell inline with `x powerpick <powershell>`
+
 **Note:** I commented out the portions of the script that parse double quotes (") in arguments differently because I found this to get in the way, especially when running PowerShell commands. If you don't like this, you are welcome to uncomment the code portions starting on line 87.
 
 ### Credit
@@ -45,6 +46,7 @@ My experience with AV/EDR evasion techniques and Cobalt Strike comes from the fo
 - [Zero-Point Security Red Team Ops II](https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii)
 - [Maldev Academy](https://maldevacademy.com)
 - [Midwest Regional Collegiate Cyber Defense Competition](https://www.cssia.org/mwccdc/) (I'm a red team volunteer)
+
 I also recommend checking out the [Sektor7 Institute](https://institute.sektor7.net) courses
 
 ### Copyright Disclaimer
