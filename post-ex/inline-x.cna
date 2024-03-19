@@ -254,9 +254,6 @@ alias x {
         }
     }
     
-    $cradle = beacon_host_imported_script($1);
-    $_assemblyWithArgs = $cradle.$_assemblyWithArgs;
-    
     #--------------------------------------Appending appDomain arguments--------------------------------------#
 
     #Appending appDomain arguments to $_appDomainArgs var (separated by " ")
