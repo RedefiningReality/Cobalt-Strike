@@ -4,6 +4,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 ### Contents
 #### Loader
 - [loader](loader/) ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode `<protocol>_x64.xprocess.bin`
+  - uses NtMapViewOfSection technique for shellcode injection
   - spawns and injects into msedge.exe by default, though you could easily change this
 #### Profile
 - [crtl.profile](profile/crtl.profile) ⇒ malleable C2 profile used on CRTL exam, based on [webbug.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/webbug.profile)
