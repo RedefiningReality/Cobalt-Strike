@@ -24,7 +24,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 1. EXE ⇒ standard Windows executable
 2. Service ⇒ Windows service executable
 
-**Note:** beaconsvc.cpp gets caught by Elastic static detection when compiled, so you might have to modify it. You can also run the standard EXE as a service, and it'll throw an error but still spawn the beacon.
+**Note:** [beaconsvc.cpp](loader/main/beaconsvc.cpp) gets caught by Elastic static detection when compiled, so you might have to modify it. You can also run the standard EXE as a service, and it'll throw an error but still spawn the beacon.
 #### Three loader variants:
 1. Download Stager ⇒ download shellcode from file hosted on Cobalt Strike team server over HTTPS
 2. Read Stager ⇒ read shellcode from disk, by default C:\Windows\beacon.bin but you can change this
