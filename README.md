@@ -61,7 +61,7 @@ My experience with AV/EDR evasion techniques and Cobalt Strike comes from the fo
 
 I also recommend checking out the [Sektor7 Institute](https://institute.sektor7.net) courses.
 
-Two additional Beacon Object Files I found very useful that I wanted to give a shoutout to, both by TrustedSec:
+Two additional Beacon Object Files I found very useful that I wanted to give a shoutout to, both by [TrustedSec](https://trustedsec.com):
 - [Situational Awareness](https://github.com/trustedsec/CS-Situational-Awareness-BOF)
 - [Remote Operations](https://github.com/trustedsec/CS-Remote-OPs-BOF)
 
