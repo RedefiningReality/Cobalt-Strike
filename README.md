@@ -17,12 +17,13 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 - [inline-x.cna](post-ex/inline-x.cna) ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier
 - [command-all.cna](post-ex/command-all.cna) ⇒ execute `run` or `shell` command on *all* active Cobalt Strike beacons, without having to interact with each one individually
 
-**Note:** When building powerpick.cs, you'll have to include a reference to **System.Management.Automation.dll**, which is located in `C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>`
+**Note:** When building powerpick.cs, you'll have to add a reference to **System.Management.Automation.dll**, which is located in `C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>`
 
 ### Loader Usage
 #### Two executable types:
 1. EXE ⇒ standard Windows executable
 2. Service ⇒ Windows service executable
+
 **Note:** beaconsvc.cpp gets caught by Elastic static detection when compiled, so you might have to modify it. You can also run the standard EXE as a service, and it'll throw an error but still spawn the beacon.
 #### Three loader variants:
 1. Download Stager ⇒ download shellcode from file hosted on Cobalt Strike team server over HTTPS
