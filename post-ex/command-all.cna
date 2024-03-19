@@ -2,7 +2,7 @@ command run_all {
   $data = substr($0, 8);
   foreach $beacon (beacons()) {
     $id = $beacon['id'];
-    brun($id, $0);
+    brun($id, $data);
   }
 }
 
@@ -10,6 +10,6 @@ command shell_all {
   $data = substr($0, 10);
   foreach $beacon (beacons()) {
     $id = $beacon['id'];
-    bshell($id, $0);
+    bshell($id, $data);
   }
 }
