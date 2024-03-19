@@ -48,7 +48,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 **Note:** I commented out the portions of the script that parse arguments in single (') and double quotes (") as a single argument because most of my tooling handles or requires these quotes. For example, the unmanaged PowerShell implementation [powerpick.cs](post-ex/powerpick.cs) takes arguments passed in, converts them to one string, and runs that string. Treating multiple words as a single argument in PowerShell commands thus requires passing in those quotes as-is. You may run into instances where you *do* need to parse arguments in quotes as a single argument, much like you would when running the .NET executable in a terminal. If this is the case, you are welcome to uncomment the code portions starting on line 87 and reload the script.
 
 ### Command All Usage
-1. Load script into Cobalt Strike
+1. [Load script](https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/welcome_cs-scripting.htm) into Cobalt Strike
 2. Open Script Console
 3. Execute `run` on all active beacons with `run_all <exe> <args>`
 4. Execute `shell` on all active beacons with `shell_all <command>`
