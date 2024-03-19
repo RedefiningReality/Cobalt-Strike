@@ -28,7 +28,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 #### Three loader variants:
 1. Download Stager ⇒ download shellcode from file hosted on Cobalt Strike team server over HTTPS
 2. Read Stager ⇒ read shellcode from disk, by default C:\Windows\beacon.bin but you can change this
-3. Stageless ⇒ include shellcode directly in PE as a resource (in .rsrc section) - requires encoding the shellcode so it's not caught by Elastic
+3. Stageless ⇒ include shellcode directly in PE as a resource (in .rsrc section) - requires encoding the shellcode so it's not caught by EDR
 #### Building the loader
 1. (stageless only) generate encoded Cobalt Strike shellcode file with [encoder.py](loader/helpers/encoder.py) - see comments for more info
 2. open [.sln](loader/loader.sln) file in [Visual Studio](https://visualstudio.microsoft.com/free-developer-offers/)
