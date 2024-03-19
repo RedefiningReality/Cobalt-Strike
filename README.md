@@ -38,7 +38,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 
 ### Inline X Usage
 1. Change `$powerpickPath` to specify the path of your unmanaged PowerShell exe (built from [powerpick.cs](post-ex/powerpick.cs))
-2. Change `$etw` and `$amsi` as you see fit - I wanted it to always bypass AMSI and ETW, which is why I set these values to 1
+2. Change `$etw` and `$amsi` as you see fit - I wanted it to always bypass AMSI and ETW, which is why I set these values to 1, though someone could argue this creates additional telemetry in instances where the AMSI/ETW bypass isn't necessary, and for this reason it's better to leave their default values at 0.
 3. [Load script](https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/welcome_cs-scripting.htm) into Cobalt Strike
 4. Execute .NET assembly inline with `x execute-assembly <exe> <args>`
 5. Execute unmanaged powershell inline with `x powerpick <powershell>`
