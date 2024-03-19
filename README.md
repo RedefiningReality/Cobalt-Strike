@@ -1,4 +1,4 @@
-# cobaltstrike
+# Cobalt Strike Resources
 Various resources to enhance Cobalt Strike's functionality and its ability to evade antivirus/EDR detection. Includes the custom tooling I used when pursuing the Certified Red Team Lead (CRTL) certification.
 
 ### Contents
