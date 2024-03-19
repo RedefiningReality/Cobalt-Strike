@@ -59,7 +59,11 @@ My experience with AV/EDR evasion techniques and Cobalt Strike comes from the fo
 - [Maldev Academy](https://maldevacademy.com)
 - [Midwest Regional Collegiate Cyber Defense Competition](https://www.cssia.org/mwccdc/) (I'm a red team volunteer)
 
-I also recommend checking out the [Sektor7 Institute](https://institute.sektor7.net) courses
+I also recommend checking out the [Sektor7 Institute](https://institute.sektor7.net) courses.
+
+Two additional Beacon Object Files I found very useful that I wanted to give a shoutout to, both by TrustedSec:
+- [Situational Awareness](https://github.com/trustedsec/CS-Situational-Awareness-BOF)
+- [Remote Operations](https://github.com/trustedsec/CS-Remote-OPs-BOF)
 
 ### Copyright Disclaimer
 I was careful to avoid any copyright infringement with the resources I publicly provided in this repo. Here are two areas where copyright might come into question:
