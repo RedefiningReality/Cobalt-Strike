@@ -10,7 +10,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 - [crtl.profile](profile/crtl.profile) ⇒ malleable C2 profile used on CRTL exam, based on [webbug.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/webbug.profile)
 - [mwccdc.profile](profile/mwccdc.profile) ⇒ malleable C2 profile used for MWCCDC regionals in 2024, based on [microsoftupdate_getonly.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/microsoftupdate_getonly.profile)
 #### Kits
-- [sleepmask](kits/sleepmask/) ⇒ Cobalt Strike sleep mask kit modifications to spoof msedge.exe legitimate thread callstack
+- [sleepmask](kits/sleepmask/) ⇒ Cobalt Strike sleep mask kit modifications to spoof legitimate msedge.exe thread callstack
 - [process_inject](kits/process_inject/) ⇒ Cobalt Strike process injection kit modifications that implement NtMapViewOfSection technique - not necessary since this option is available in the malleable C2 profile, but it's a good example of how to use kernel32.dll and ntdll.dll Windows API function calls to create your own injection. I found concrete examples of this to be severely lacking on the internet.
 #### Post-Ex
 - [powerpick.cs](post-ex/powerpick.cs) ⇒ C# code for running unmanaged PowerShell, providing the PowerShell command as an argument(s) - compatible with inline-x.cna
