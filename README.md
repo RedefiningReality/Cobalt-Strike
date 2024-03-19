@@ -27,7 +27,7 @@ Various resources to enhance Cobalt Strike's functionality and its ability to ev
 **Note:** beaconsvc.cpp gets caught by Elastic static detection when compiled, so you might have to modify it. You can also run the standard EXE as a service, and it'll throw an error but still spawn the beacon.
 #### Three loader variants:
 1. Download Stager ⇒ download shellcode from file hosted on Cobalt Strike team server over HTTPS
-2. Read Stager ⇒ read shellcode from disk
+2. Read Stager ⇒ read shellcode from disk, by default C:\Windows\beacon.bin but you can change this
 3. Stageless ⇒ include shellcode directly in PE as a resource (in .rsrc section) - requires encoding the shellcode so it's not caught by Elastic
 #### Building the loader
 1. (stageless only) generate encoded Cobalt Strike shellcode file with [encoder.py](loader/helpers/encoder.py) - see comments for more info
