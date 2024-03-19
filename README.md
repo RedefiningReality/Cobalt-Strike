@@ -1,6 +1,8 @@
 # Cobalt Strike Resources
 Various resources to enhance Cobalt Strike's functionality and its ability to evade antivirus/EDR detection. Includes the custom tooling I used when pursuing the Certified Red Team Lead (CRTL) certification.
 
+For my Red Team Ops I and II cheat sheets, check out my [cheat sheets repo](https://github.com/RedefiningReality/Cheatsheets).
+
 ### Contents
 #### Loader
 - [loader](loader/) ⇒ used to bypass Windows Defender and Elastic EDR detections to run Cobalt Strike beacon shellcode `<protocol>_x64.xprocess.bin`
