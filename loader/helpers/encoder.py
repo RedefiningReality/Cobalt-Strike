@@ -1,5 +1,5 @@
 # encode beacon shellcode file to bypass elastic detections
-# encoding method: convert bytes to hex -> reeplace numbers with letters
+# encoding method: convert bytes to hex -> replace numbers with letters
 # resource size = original payload size * 2
 
 # after running this, replace loader.rc with beacon.ico resource
