@@ -1,6 +1,8 @@
 # Cobalt Strike Resources
 Various resources to enhance Cobalt Strike's functionality and its ability to evade antivirus/EDR detection. Includes the custom tooling I used when pursuing the Certified Red Team Lead (CRTL) certification.
 
+Click [here](https://docs.google.com/presentation/d/1FATzBCzp1nPhXFKdcj9M96Pl1fUjoxNGep6sQr6c-As/) for the PowerPoint I presented at ChiCyberCon in 2024 that summarizes my research. I'm open to community suggestions on restructuring or adding content to this PowerPoint. Feel free to submit a GitHub issue regarding this.
+
 For my Red Team Ops I and II cheat sheets, check out my [cheat sheets repo](https://github.com/RedefiningReality/Cheatsheets).
 
 ### Contents
@@ -70,4 +72,7 @@ Two additional Beacon Object Files I found very useful that I wanted to give a s
 ### Copyright Disclaimer
 I was careful to avoid any copyright infringement with the resources I publicly provided in this repo. Here are two areas where copyright might come into question:
 1. I include my modifications to the Cobalt Strike process injection and sleep mask kits from Fortra, which are closed-source. However, I only provided files to which I made modifications, and I replaced all portions of the code that were not my own with a comment stating *redacted*. Should you choose to use these resources, you'll have to copy my code portions over from this repo to the corresponding files in the kits.
-2. In my loader, I included code taken directly from the Zero-Point Security Red Team Ops II course. However, this code is publicly available and easily-obtainable online as well. Telling ChatGPT to "write C++ code using WinHTTP to download a file and save it to an std::vector\<BYTE\>" yields almost the exact same code for the Download function, and the NtMapViewOfSection technique is [publicly documented](https://www.ired.team/offensive-security/code-injection-process-injection/ntcreatesection-+-ntmapviewofsection-code-injection) in various locations, making use of the same Windows API function calls in the same order. Also keep in mind this repo doesn't come close to being a substitute for [the course](https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii) itself, which in my opinion is absolutely worth taking.
+
+### Note
+I do this research for fun because this is my passion. If you like what I do and would like me to be part of your offensive team, feel free to reach out to me at johnford.security@proton.me or [connect with me on LinkedIn](https://www.linkedin.com/in/johnfordsecurity/).
+3. In my loader, I included code taken directly from the Zero-Point Security Red Team Ops II course. However, this code is publicly available and easily-obtainable online as well. Telling ChatGPT to "write C++ code using WinHTTP to download a file and save it to an std::vector\<BYTE\>" yields almost the exact same code for the Download function, and the NtMapViewOfSection technique is [publicly documented](https://www.ired.team/offensive-security/code-injection-process-injection/ntcreatesection-+-ntmapviewofsection-code-injection) in various locations, making use of the same Windows API function calls in the same order. Also keep in mind this repo doesn't come close to being a substitute for [the course](https://training.zeropointsecurity.co.uk/courses/red-team-ops-ii) itself, which in my opinion is absolutely worth taking.
