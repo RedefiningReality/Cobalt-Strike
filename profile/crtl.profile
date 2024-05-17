@@ -113,7 +113,7 @@ post-ex {
 
         # SpawnTo
         set spawnto_x86 "c:\\windows\\syswow64\\cmd.exe";
-        set spawnto_x64 "C:\\program files (x86)\\microsoft\\edge\\application\\msedge.exe";
+        set spawnto_x64 "c:\\program files (x86)\\microsoft\\edge\\application\\msedge.exe";
 
         # SMB Named Pipes Names
         # include pound (#) for random hex digit
